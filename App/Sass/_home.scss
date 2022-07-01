@@ -1,0 +1,35 @@
+section {
+    padding: 8rem 9%;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url(../Images/14+\ Minimalist\ Anime\ Desktop\ Wallpaper\ Hd.png);
+    background-size: cover;
+    background-position: center;
+
+    .content {
+        max-width: 50rem;
+
+        h3 {
+            font-size: 6rem;
+            color: #333;
+        }
+
+        span {
+            font-size: 3.5rem;
+            color: rgb(255, 97, 123);
+            padding: 1rem 0rem;
+            line-height: 1.5;
+        }
+
+        p {
+            font-size: 1.5rem;
+            color: rgb(122, 122, 122);
+            padding: 1rem 0rem;
+            line-height: 1.5;
+        }
+    }
+}

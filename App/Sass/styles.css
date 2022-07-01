@@ -1,0 +1,415 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+html {
+  font-size: 62%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.btn {
+  display: inline-block;
+  margin: 1rem;
+  border-radius: 1rem;
+  background: #333;
+  color: #fff;
+  padding: 1.3rem 2.5rem;
+  cursor: pointer;
+  font-size: 1.7rem;
+  transition: all 300ms ease-in-out;
+}
+.btn:hover {
+  color: #000;
+  background: rgb(252, 97, 123);
+}
+
+/* Media Queries */
+@media (max-width: 940px) {
+  .hide-for-mobile {
+    display: none;
+  }
+
+  html {
+    font-size: 59%;
+  }
+
+  header {
+    padding: 2rem;
+  }
+  header .nav-bar > a {
+    padding: 0 1.5rem;
+  }
+
+  section {
+    padding: 2rem;
+  }
+}
+@media (max-width: 785px) {
+  header .nav-bar > a {
+    padding: 0 1.5rem;
+  }
+  header .hamburger > span {
+    display: block;
+  }
+  header .nav-bar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgb(250, 250, 250);
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.3);
+  }
+  header .nav-bar > a {
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    margin: 1.5rem;
+    background: #fff;
+    border: 0.1rem solid rgba(0, 0, 0, 0.3);
+    display: block;
+  }
+
+  .home .content h3 {
+    font-size: 5rem;
+  }
+}
+@media (max-width: 685px) {
+  .about .content {
+    height: 500px;
+  }
+
+  .this-too {
+    display: none;
+  }
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 2rem 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+header .logo {
+  font-size: 3rem;
+  color: #333;
+  font-weight: bolder;
+}
+header .logo > span {
+  color: pink;
+}
+header .nav-bar > a {
+  font-size: 1.5rem;
+  color: #666;
+  transition: color 300ms ease-in-out;
+}
+header .nav-bar > a:not(:last-child) {
+  margin-right: 25px;
+}
+header .nav-bar > a:hover {
+  color: pink;
+}
+header .icons > a {
+  font-size: 2.5rem;
+  color: #333;
+  margin-left: 1.5rem;
+  transition: color 300ms ease-in-out;
+}
+header .icons > a:hover {
+  color: pink;
+}
+
+.hamburger > span {
+  display: none;
+  width: 26px;
+  height: 2px;
+  background-color: #333;
+  transition: all 300ms ease-in-out;
+  transform-origin: 4px 1px;
+}
+.hamburger > span:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+section {
+  padding: 8rem 9%;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background: url(../Images/14+\ Minimalist\ Anime\ Desktop\ Wallpaper\ Hd.png);
+  background-size: cover;
+  background-position: center;
+}
+.home .content {
+  max-width: 50rem;
+}
+.home .content h3 {
+  font-size: 6rem;
+  color: #333;
+}
+.home .content span {
+  font-size: 3.5rem;
+  color: rgb(255, 97, 123);
+  padding: 1rem 0rem;
+  line-height: 1.5;
+}
+.home .content p {
+  font-size: 1.5rem;
+  color: rgb(122, 122, 122);
+  padding: 1rem 0rem;
+  line-height: 1.5;
+}
+
+.about {
+  min-height: 100vh;
+  background: url(../Images/Rin.png);
+  background-size: cover;
+  background-position: center;
+}
+.about .heading {
+  text-align: center;
+  font-size: 4rem;
+  color: #333;
+  padding: 1rem;
+  margin: 2rem 0;
+}
+.about .heading span {
+  color: rgba(255, 65, 96, 0.959);
+}
+.about .content {
+  padding: 40px;
+  height: 475px;
+  margin: 0 auto;
+  width: 90%;
+  box-shadow: 8px 8px rgba(154, 255, 233, 0.71);
+  max-width: 800px;
+  background: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+}
+.about .content .midText {
+  color: rgb(17, 17, 17);
+  font-weight: 400;
+  text-align: left;
+  padding-top: 5px;
+  padding-left: 0px;
+  padding-bottom: 10px;
+  font-weight: 400;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 0.933;
+  margin-top: 0;
+  position: relative;
+  letter-spacing: 0.025em;
+}
+
+.icons-container {
+  background: linear-gradient(165deg, rgb(255, 220, 226), rgb(184, 255, 255));
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.icons-container .icons {
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  flex: 1 1 25rem;
+}
+.icons-container .icons > img {
+  height: 5rem;
+  margin-right: 2rem;
+}
+.icons-container .icons .info h3 {
+  color: #333;
+  padding-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+.icons-container .icons .info span {
+  color: #555;
+  font-size: 1.3rem;
+}
+
+.products {
+  background: linear-gradient(165deg, rgb(184, 255, 255), rgb(255, 220, 226));
+}
+.products .heading {
+  color: rgb(254, 104, 129);
+  text-align: center;
+  font-size: x-large;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-shadow: 1px 1px #493636;
+}
+.products .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+.products .box-container .box {
+  background: #fff;
+  flex: 1 1 30rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: all 200ms ease-in-out;
+}
+.products .box-container .box .discount {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.7rem 1rem;
+  font-size: 2rem;
+  color: pink;
+  background: rgba(255, 51, 153, 0.05);
+  z-index: 1;
+}
+.products .box-container .box .image {
+  position: relative;
+  text-align: center;
+  padding-top: 2rem;
+  overflow: hidden;
+}
+.products .box-container .box .image img {
+  height: 25rem;
+  transition: all 300ms ease-in-out;
+}
+.products .box-container .box .image img:hover {
+  transform: scale(1.2);
+}
+.products .box-container .box .image .icons {
+  position: absolute;
+  bottom: -7rem;
+  left: 0;
+  right: 0;
+  display: flex;
+}
+.products .box-container .box .image .icons a {
+  height: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  width: 50%;
+  color: rgba(0, 0, 0, 0.7);
+  background: rgba(255, 222, 227, 0.5);
+}
+.products .box-container .box .image .icons a:hover {
+  font-weight: bold;
+  color: rgb(77, 74, 255);
+}
+.products .box-container .box .content {
+  padding: 2rem;
+  text-align: center;
+}
+.products .box-container .box .content h3 {
+  font-size: 2.5rem;
+  color: #333;
+}
+.products .box-container .box .content .price {
+  font-size: 2.5rem;
+  color: pink;
+  font-weight: bolder;
+  padding-top: 1rem;
+}
+.products .box-container .box .content span {
+  font-size: 1.5rem;
+  color: #999;
+  font-weight: lighter;
+  text-decoration: line-through;
+}
+.products .box-container .box:hover .image .icons {
+  bottom: 0;
+}
+
+.contact {
+  background: linear-gradient(165deg, rgb(255, 220, 226), rgb(184, 255, 255));
+}
+.contact .heading {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  font-weight: bolder;
+  font-size: x-large;
+}
+.contact .heading span {
+  color: rgb(254, 108, 108);
+}
+.contact .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+.contact .row form {
+  flex: 1 1 40rem;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border-radius: 0.5rem;
+}
+.contact .row form .box {
+  padding: 1rem;
+  font-size: 1.7rem;
+  color: #333;
+  text-transform: none;
+  border: 0.2rem solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  margin: 0.7rem 0;
+  width: 100%;
+}
+.contact .row form .box:focus {
+  border-color: pink;
+}
+.contact .row form textarea {
+  height: 15rem;
+  resize: none;
+}
+.contact .row .image {
+  flex: 1 1 40rem;
+}
+.contact .row .image img {
+  width: 100%;
+}
+
+.footer {
+  background: linear-gradient(165deg, rgb(184, 255, 255), rgb(255, 220, 226));
+}
+.footer .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.footer .box-container .box {
+  flex: 1 1 25rem;
+}
+.footer .box-container .box h3 {
+  color: #333;
+  font-size: 2.5rem;
+  padding: 1rem 0;
+}
+.footer .box-container .box a {
+  display: block;
+  font-size: 1.5rem;
+  color: #666;
+  padding: 1rem 0;
+}
+.footer .box-container .box a:hover {
+  color: rgb(255, 153, 170);
+  transform: scale(1.1);
+}/*# sourceMappingURL=styles.css.map */
