@@ -22,6 +22,8 @@ header {
   }
 
   .nav-bar {
+    transition: all 300ms ease-in-out;
+
     > a {
       font-size: 1.5rem;
       color: #666;
@@ -67,3 +69,11 @@ header {
 		}
 	}
 }
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}  

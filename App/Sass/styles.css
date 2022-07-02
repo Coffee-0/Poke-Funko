@@ -31,6 +31,10 @@ html {
   background: rgb(252, 97, 123);
 }
 
+.only-for-mobile {
+  display: none;
+}
+
 /* Media Queries */
 @media (max-width: 940px) {
   .hide-for-mobile {
@@ -55,6 +59,9 @@ html {
 @media (max-width: 785px) {
   header .nav-bar > a {
     padding: 0 1.5rem;
+  }
+  header .only-for-mobile {
+    display: block;
   }
   header .hamburger > span {
     display: block;
@@ -109,6 +116,9 @@ header .logo {
 header .logo > span {
   color: pink;
 }
+header .nav-bar {
+  transition: all 300ms ease-in-out;
+}
 header .nav-bar > a {
   font-size: 1.5rem;
   color: #666;
@@ -140,6 +150,14 @@ header .icons > a:hover {
 }
 .hamburger > span:not(:last-child) {
   margin-bottom: 5px;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
 }
 
 section {
